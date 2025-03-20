@@ -1,0 +1,378 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+header {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  padding: 1em;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+nav { 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+}
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:hover{
+  color:#950abb;
+  text-decoration: underline;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+}
+h2{
+  text-align: center;
+  font-style: italic;
+  
+}
+footer{
+  background-color: #000;
+  padding: 2em;
+  text-align: center;
+  color: #fff;
+
+}
+
+.Homepage{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:  center;
+  background-image: url(IMG/pexels-falling4utah-1080696.jpg);
+  width: 100%;
+  height: 50vh ;
+  color: #000;
+  background-size: cover;
+  background-position: center;
+
+}
+.Properties {
+  grid-column: 1;
+}
+
+.Agents {
+  grid-column: 1;
+}
+
+.login{
+  background-color: transparent;
+  color:black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logo {
+  display: flex; /* add this to make the logo a flex container */
+  flex-direction: column;
+  align-items: center; /* add this to center the h2 elements vertically */
+}
+
+.logo h2:first-child {
+  margin-right: 10px; /* add some margin to the right of the first h2 */
+}
+
+.property-listing{
+  display: flex;
+  background-color: #fff;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.image{
+  width:40%;
+  position: relative;
+}
+.main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbnail-images {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+}
+
+.thumbnail-images img {
+  width: 30%;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.details {
+  width: 60%;
+  padding: 20px;
+}
+
+
+
+.price {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.like-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: lightgray;
+}
+
+.like-button:hover {
+  color: #ff5a5f; 
+}
+
+.description {
+  margin-bottom: 15px;
+}
+
+.description h2 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.description p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.property-size {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #555;
+}
+
+.property-size svg {
+  margin-right: 5px;
+  fill: #555;
+}
+
+
+/*Agents styles */
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form {
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  opacity: 0; 
+  transform: translateY(50px);
+  animation: insertForm 1.5s forwards;
+  animation-delay: 3s;
+}
+
+.form img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.forms-container .form {
+  animation: insertForm 1.5s forwards; /* animation name, duration, and fill-mode */
+  animation-delay: 3s; /* delay for the second form */
+}
+
+.forms-container .form:nth-child(2) {
+  animation-delay: 1s; 
+}
+
+@keyframes insertForm {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/*Contact Us styles */
+.Contact .form {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 50%;
+  margin: 20px auto;
+}
+
+.Contact label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.Contact input, .Contact textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.Contact input[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.Contact input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+.iframe{
+  align-items: center;
+  text-align: center;
+}
+/*footer styles */
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+.footer-logo {
+  width: 20%;
+  margin-right: 20px;
+}
+
+.footer-logo img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+.footer-links {
+  width: 20%;
+  margin-right: 20px;
+}
+
+.footer-links h3 {
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-links a:hover {
+  color: #950abb;
+}
+
+.footer-contact {
+  width: 20%;
+  margin-right: 20px;
+}
+
+.footer-contact h3 {
+  margin-bottom: 10px;
+}
+
+.footer-contact p {
+  margin-bottom: 10px;
+}
+
+.footer-social {
+  width: 20%;
+}
+
+.footer-social h3 {
+  margin-bottom: 10px;
+}
+
+.footer-social ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-social li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.footer-social a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-social a:hover {
+  color: #950abb;
+}
+
+.footer-copyright {
+  background-color: #444;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  clear: both;
+}
+/* Add more styles as needed */
